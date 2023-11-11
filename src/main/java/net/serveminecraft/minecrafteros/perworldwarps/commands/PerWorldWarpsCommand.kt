@@ -48,7 +48,7 @@ class PerWorldWarpsCommand(private val plugin: PerWorldWarps): CommandExecutor {
                             return false
                     }
                     "reload" -> {
-                        if ((sender is Player && sender.isOp || sender.hasPermission("perworldwarps.help")) || sender !is Player) {
+                        if ((sender is Player && sender.isOp || sender.hasPermission("perworldwarps.reload")) || sender !is Player) {
                             reload()
                             sender.sendMessage(LegacyComponentSerializer.legacyAmpersand().deserialize(MessagesUtil.getFullMessageFromConfig(plugin, "plugin-reloaded-successfully", replaces)))
                         } else {
